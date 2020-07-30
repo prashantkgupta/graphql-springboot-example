@@ -3,6 +3,7 @@ package com.example.graphql.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import com.example.graphql.domain.Account;
@@ -39,6 +40,7 @@ public class AccountServiceImpl implements AccountService {
 
 	@Override
 	public List<Account> getAccounts() {
+		System.out.println("in query::");
 		return accountRepo.getAccountList();
 	}
 }

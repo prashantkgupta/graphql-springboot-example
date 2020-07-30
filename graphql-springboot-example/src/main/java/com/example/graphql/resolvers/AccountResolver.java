@@ -3,7 +3,7 @@ package com.example.graphql.resolvers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.coxautodev.graphql.tools.GraphQLResolver;
+import graphql.kickstart.tools.GraphQLResolver;
 import com.example.graphql.domain.Account;
 import com.example.graphql.domain.Customer;
 import com.example.graphql.domain.Transaction;

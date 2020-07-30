@@ -1,0 +1,90 @@
+schema {
+    query: Query
+    mutation: Mutation
+    subscription: Subscription
+}
+
+type Query {
+    getAccounts:[Account!]
+    getCustomers: [Customer!]
+    getTransactions:[Transaction!]
+}
+
+type Mutation {
+    addAccount(account: AccountInput!): Account!
+    addCustomer(customer : CustomerInput!): Customer!
+    addTransaction(transaction : TransactionInput!): Transaction!
+    deleteAccount(accountNumber:ID!): String!
+}
+
+type Subscription {
+    listenNewAccount:Account!
+    listenNewTransaction:Transaction!
+}
+
+type Account {
+    accountNumber: Int!
+    accountName: String!
+    accountBalance: Float!
+    accountType: String!
+    customer: Customer
+    transaction: Transaction
+}
+
+
+type Customer {
+    customerId: ID!
+    customerType: String!
+    firstName: String!
+    lastName: String!
+    address: Address
+}
+
+type Transaction{
+    transactionId: ID!
+    accountNumber: Int!
+    transactionDate: String!
+    transactionDescription: String!
+    merchantName: String
+}
+
+type Address {
+    addressLine1: String!
+    addressLine2: String
+    city: String!
+    state: String!
+    zipCode: Int!
+    country: String!
+}
+
+input AccountInput {
+    accountNumber: Int!
+    accountName: String!
+    accountBalance: Float!
+    accountType: String!
+}
+
+input CustomerInput {
+    customerId: ID!
+    customerType: String!
+    firstName: String!
+    lastName: String!
+    address: AddressInput
+}
+
+input TransactionInput{
+    transactionId: ID!
+    accountNumber: Int!
+    transactionDate: String!
+    transactionDescription: String!
+    merchantName: String
+}
+
+input AddressInput {
+    addressLine1: String!
+    addressLine2: String
+    city: String!
+    state: String!
+    zipCode: Int!
+    country: String!
+}

@@ -4,7 +4,7 @@ import org.reactivestreams.Publisher;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.coxautodev.graphql.tools.GraphQLSubscriptionResolver;
+import graphql.kickstart.tools.GraphQLSubscriptionResolver;
 import com.example.graphql.domain.Account;
 import com.example.graphql.domain.Transaction;
 import com.example.graphql.publisher.AccountPublisher;

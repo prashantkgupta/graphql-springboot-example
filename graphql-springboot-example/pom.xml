@@ -20,18 +20,20 @@
     <dependency>
       <groupId>com.graphql-java-kickstart</groupId>
       <artifactId>graphql-spring-boot-starter</artifactId>
-      <version>5.2</version>
+      <version>7.0.1</version>
     </dependency>
     <dependency>
       <groupId>com.graphql-java-kickstart</groupId>
       <artifactId>graphiql-spring-boot-starter</artifactId>
-      <version>5.2</version>
+      <version>7.0.1</version>
+      <scope>runtime</scope>
     </dependency>
-    <dependency>
+   <dependency>
       <groupId>com.graphql-java-kickstart</groupId>
       <artifactId>voyager-spring-boot-starter</artifactId>
-      <version>5.2</version>
-    </dependency>
+      <version>7.0.1</version>
+      <scope>runtime</scope>
+    </dependency> 
     <dependency>
       <groupId>io.reactivex.rxjava2</groupId>
       <artifactId>rxjava</artifactId>
@@ -47,10 +49,10 @@
       <artifactId>spring-boot-starter-web</artifactId>
          <version>2.1.0.RELEASE</version>
     </dependency>
-    <dependency>
+ <dependency>
       <groupId>com.graphql-java-kickstart</groupId>
       <artifactId>graphql-spring-boot-starter-test</artifactId>
-      <version>5.2</version>
+      <version>7.0.1</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
